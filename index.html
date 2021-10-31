@@ -2,23 +2,27 @@
 <html>
 <head>
 <style> 
-mainRunner {
+.container {
   position: relative;
 }
-img1 {
-  position: relative;
-  z-index: 2;
-}
-img2 {
+
+.black-box {
   position: relative;
   z-index: 1;
-  top: -12px;
-  left: 12px;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
 }
-<div class="mainRunner">
-  <img class="img1" src="Artboard 1@2x-100.jpg" />
-  <img class="img2" src="project 1/ezgif.com-gif-maker.gif" />
-</div>
+
+.gray-box {
+  position: absolute;
+  z-index: 3; /* gray box will be above both green and black box */
+  background: lightgray;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
 </style>
 </head>
 <body>
@@ -32,5 +36,9 @@ img2 {
 <body>
     <h1>A page for creative tech...</h1>
     <p>welcome my friends</p>
+    <div class="container">
+      <div class="black-box">Black box</div>
+      <div class="gray-box">Gray box</div>
+    </div>
 </body>
 </html>
